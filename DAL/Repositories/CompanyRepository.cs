@@ -39,9 +39,10 @@ namespace DAL.Repositories
         {
             using IDbConnection connection = new SqlConnection(_connectionString);
 
-            var sql = $"SELECT * FROM Company INNER JOIN Employee ON Employee.CompanyId=Company.Id WHERE Company.Id='{id}'";
+            var sql = $"SELECT * FROM Company INNER JOIN Employee ON Company.Id=Employee.CompanyId WHERE Company.Id='{id}'";
             var company = connection.Query<CompanyEntity, EmployeeEntity, CompanyEntity>(sql, (company, employee) =>
             {
+                if (company.Emloyees == null) { company.Emloyees = new List<EmployeeEntity>(); }
                 company.Emloyees.Add(employee);
                 return company;
             });
