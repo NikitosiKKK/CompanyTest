@@ -1,0 +1,12 @@
+D:\works\Новая папка\ComponyTest\DAL\bin\Debug\net6.0\DAL.deps.json
+D:\works\Новая папка\ComponyTest\DAL\bin\Debug\net6.0\DAL.dll
+D:\works\Новая папка\ComponyTest\DAL\bin\Debug\net6.0\DAL.pdb
+D:\works\Новая папка\ComponyTest\DAL\obj\Debug\net6.0\DAL.csproj.AssemblyReference.cache
+D:\works\Новая папка\ComponyTest\DAL\obj\Debug\net6.0\DAL.GeneratedMSBuildEditorConfig.editorconfig
+D:\works\Новая папка\ComponyTest\DAL\obj\Debug\net6.0\DAL.AssemblyInfoInputs.cache
+D:\works\Новая папка\ComponyTest\DAL\obj\Debug\net6.0\DAL.AssemblyInfo.cs
+D:\works\Новая папка\ComponyTest\DAL\obj\Debug\net6.0\DAL.csproj.CoreCompileInputs.cache
+D:\works\Новая папка\ComponyTest\DAL\obj\Debug\net6.0\DAL.dll
+D:\works\Новая папка\ComponyTest\DAL\obj\Debug\net6.0\refint\DAL.dll
+D:\works\Новая папка\ComponyTest\DAL\obj\Debug\net6.0\DAL.pdb
+D:\works\Новая папка\ComponyTest\DAL\obj\Debug\net6.0\ref\DAL.dll

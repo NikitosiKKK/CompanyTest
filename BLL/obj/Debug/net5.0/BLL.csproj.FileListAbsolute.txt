@@ -1,0 +1,15 @@
+D:\works\Новая папка\ComponyTest\BLL\obj\Debug\net5.0\BLL.csproj.AssemblyReference.cache
+D:\works\Новая папка\ComponyTest\BLL\obj\Debug\net5.0\BLL.GeneratedMSBuildEditorConfig.editorconfig
+D:\works\Новая папка\ComponyTest\BLL\obj\Debug\net5.0\BLL.AssemblyInfoInputs.cache
+D:\works\Новая папка\ComponyTest\BLL\obj\Debug\net5.0\BLL.AssemblyInfo.cs
+D:\works\Новая папка\ComponyTest\BLL\obj\Debug\net5.0\BLL.csproj.CoreCompileInputs.cache
+D:\works\Новая папка\ComponyTest\BLL\bin\Debug\net5.0\BLL.deps.json
+D:\works\Новая папка\ComponyTest\BLL\bin\Debug\net5.0\BLL.dll
+D:\works\Новая папка\ComponyTest\BLL\bin\Debug\net5.0\BLL.pdb
+D:\works\Новая папка\ComponyTest\BLL\bin\Debug\net5.0\DAL.dll
+D:\works\Новая папка\ComponyTest\BLL\bin\Debug\net5.0\DAL.pdb
+D:\works\Новая папка\ComponyTest\BLL\obj\Debug\net5.0\BLL.csproj.CopyComplete
+D:\works\Новая папка\ComponyTest\BLL\obj\Debug\net5.0\BLL.dll
+D:\works\Новая папка\ComponyTest\BLL\obj\Debug\net5.0\refint\BLL.dll
+D:\works\Новая папка\ComponyTest\BLL\obj\Debug\net5.0\BLL.pdb
+D:\works\Новая папка\ComponyTest\BLL\obj\Debug\net5.0\ref\BLL.dll
