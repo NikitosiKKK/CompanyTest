@@ -37,13 +37,13 @@ namespace BLL.Maps
         }
         public static CompanyEntity Map(CompanyUpdateModel company)
         {
-            var photoEntity = new CompanyEntity
+            var updatedEntity = new CompanyEntity
             {
                 Name = company.Name,
                 Form = company.Form
             };
 
-            return photoEntity;
+            return updatedEntity;
         }
     }
 }

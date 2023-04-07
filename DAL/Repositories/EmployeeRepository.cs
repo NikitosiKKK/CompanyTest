@@ -23,7 +23,7 @@ namespace DAL.Repositories
         public EmployeeEntity Create(EmployeeEntity employeeEntity)
         {
             using IDbConnection db = new SqlConnection(_connectionString);
-            var sqlQuery = $"INSERT INTO Employee (Name, Surname, Patronymic, Title, Company) VALUES (@Name, @Surname, @Patronomic, @Title, @Company)";
+            var sqlQuery = $"INSERT INTO Employee (Name, Surname, Patronymic, Title) VALUES (@Name, @Surname, @Patronymic, @Title)";
             db.Execute(sqlQuery, employeeEntity);
             return employeeEntity;
         }
@@ -40,20 +40,6 @@ namespace DAL.Repositories
             using IDbConnection db = new SqlConnection(_connectionString);
             return db.QuerySingleOrDefault<EmployeeEntity>("SELECT * FROM Employee WHERE id = @id", new { id });
         }
-        public EmployeeEntity Get2(int id)
-        {
-            using IDbConnection connection = new SqlConnection(_connectionString);
-
-            var sql = $"SELECT * FROM Employee INNER JOIN Company ON Employee.CompanyId=Company.Id WHERE Employee.Id='{id}'";
-            var employee = connection.Query<EmployeeEntity, CompanyEntity, EmployeeEntity>(sql, (employee, company) =>
-            {
-                employee.Company = company;
-                return employee;    
-            });
-
-            return employee.FirstOrDefault();
-        }
-
         public List<EmployeeEntity> List()
         {
             using IDbConnection db = new SqlConnection(_connectionString);
@@ -64,7 +50,7 @@ namespace DAL.Repositories
         public EmployeeEntity Update(EmployeeEntity employeeEntity)
         {
             using IDbConnection db = new SqlConnection(_connectionString);
-            var sqlQuery = $"UPDATE Employee SET Name = @Name, Surname=@Url ,Patronymic=@Patronymic, Title=@Title, Company=@Company WHERE id = '{employeeEntity.Id}'";
+            var sqlQuery = $"UPDATE Employee SET Name = @Name, Surname=@Surname ,Patronymic=@Patronymic, Title=@Title WHERE id = '{employeeEntity.Id}'";
             db.Execute(sqlQuery, employeeEntity);
             return employeeEntity;
         }

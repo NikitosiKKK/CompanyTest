@@ -13,6 +13,5 @@ namespace BLL.Models
         public string Surname { get; set; }
         public string Patronymic { get; set; }
         public string Title { get; set; }
-        public CompanyModel Company { get; set; }
     }
 }

@@ -48,7 +48,6 @@ namespace BLL.Maps
                 Surname = employee.Surname,
                 Patronymic = employee.Patronymic,
                 Date = employee.Date,
-                Company = CompanyMap.Map(employee.Company),
                 Title = employee.Title
             };
 
