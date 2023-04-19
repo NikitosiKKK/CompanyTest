@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
+using System.Runtime.InteropServices;
 
 namespace BLL.Models
 {
@@ -8,20 +9,25 @@ namespace BLL.Models
         public int Id { get; set; }
         [Required(ErrorMessage = "Insert name")]
         [StringLength(50, MinimumLength = 2, ErrorMessage = "The lenght of the name should be form 2 to 50")]
+        [RegularExpression(@"^[^0-9 ]+$", ErrorMessage = "The Name cannot contain spaces or numbers")]
+
         public string Name { get; set; }
         [Required]
         public DateTime Date { get; set; }
 
         [Required(ErrorMessage = "Insert surname")]
         [StringLength(50, MinimumLength = 2, ErrorMessage = "The lenght of the surname should be form 2 to 50")]
+        [RegularExpression(@"^[^0-9 ]+$", ErrorMessage = "The Surname cannot contain spaces or numbers")]
         public string Surname { get; set; }
 
         [Required(ErrorMessage = "Insert patronymic")]
         [StringLength(50, MinimumLength = 2, ErrorMessage = "The lenght of the patronymic should be form 2 to 50")]
+        [RegularExpression(@"^[^0-9 ]+$", ErrorMessage = "The Patronymic cannot contain spaces or numbers")]
         public string Patronymic { get; set; }
 
         [Required(ErrorMessage = "Insert title")]
         [StringLength(50, MinimumLength = 2, ErrorMessage = "The lenght of the title should be form 2 to 50")]
+        [RegularExpression(@"^[^0-9 ]+$", ErrorMessage = "The Title cannot contain spaces or numbers")]
         public string Title { get; set; }
         public int? CompanyId { get; set; }
     }
