@@ -5,20 +5,20 @@
     <html>
     <head>
         <meta name="viewport" content="width=device-width" />
-        <title>Компании</title>
+        <title>Companies</title>
     </head>
     <body>
         <div>
-            <h3>Даннные о компании</h3>
+            <h3>Company data</h3>
             <table>
 
                 <tr>
-                    <td><p>Имя компании</p></td>
-                    <td><p>Форма</p></td>
-                    <td><p>Имя сотрудника</p></td>
-                    <td><p>Фамилия</p></td>
-                    <td><p>Отчество</p></td>
-                    <td><p>Должность</p></td>
+                    <td><p>Name of the company</p></td>
+                    <td><p>Form</p></td>
+                    <td><p>Name of the employee</p></td>
+                    <td><p>Surname</p></td>
+                    <td><p>Patronymic</p></td>
+                    <td><p>Title</p></td>
 
                 </tr>
                     @foreach (var b in Model.Employees)
@@ -36,6 +36,6 @@
             </table>
             
         </div>
-        <a href="/VCompanies/Companies">Вернуться на главную</a>
+        <a href="/VCompanies/Companies">Back in the main page</a>
     </body>
 </html>
