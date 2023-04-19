@@ -5,6 +5,7 @@ using DAL.Repositories;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -32,8 +33,7 @@ namespace ComponyTest
             services.AddTransient<IEmployeeRepository, EmployeeRepository>(x => new EmployeeRepository(connectionString));
             services.AddTransient<ICompanyService, CompanyService>();
             services.AddTransient<IEmployeeService, EmployeeService>();
-
-            services.AddControllers();
+            services.AddMvc(option => option.EnableEndpointRouting = false);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -43,11 +43,10 @@ namespace ComponyTest
             {
                 app.UseDeveloperExceptionPage();
             }
-            app.UseHttpsRedirection();
-
-            app.UseRouting();
-
-            app.UseEndpoints(endpoints => { endpoints.MapControllers(); });
+            app.UseDeveloperExceptionPage();
+            app.UseStatusCodePages();
+            app.UseStaticFiles();
+            app.UseMvcWithDefaultRoute(); 
         }
     }
 }

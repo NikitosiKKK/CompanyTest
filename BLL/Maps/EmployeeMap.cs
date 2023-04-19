@@ -12,17 +12,23 @@ namespace BLL.Maps
     {
         public static EmployeeModel Map(EmployeeEntity employee)
         {
-            var employeeModel = new EmployeeModel
+            if (employee != null)
             {
-                Id = employee.Id,
-                Name = employee.Name,
-                Surname = employee.Surname,
-                Patronymic=employee.Patronymic,
-                Date=employee.Date,
-                Title=employee.Title
-            };
+                var employeeModel = new EmployeeModel
+                {
+                    Id = employee.Id,
+                    Name = employee.Name,
+                    Surname = employee.Surname,
+                    Patronymic = employee.Patronymic,
+                    Date = employee.Date,
+                    Title = employee.Title,
+                    CompanyId = employee.CompanyId
+                };
 
-            return employeeModel;
+                return employeeModel;
+            }
+            
+            return null;
         }
 
         public static EmployeeEntity Map(EmployeeModel employee)
@@ -34,7 +40,8 @@ namespace BLL.Maps
                 Surname = employee.Surname,
                 Patronymic = employee.Patronymic,
                 Date = employee.Date,
-                Title = employee.Title
+                Title = employee.Title,
+                CompanyId = employee.CompanyId
             };
 
             return employeeEntity;
@@ -48,7 +55,8 @@ namespace BLL.Maps
                 Surname = employee.Surname,
                 Patronymic = employee.Patronymic,
                 Date = employee.Date,
-                Title = employee.Title
+                Title = employee.Title,
+                CompanyId = employee.CompanyId
             };
 
             return employeeEntity;

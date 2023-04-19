@@ -1,0 +1,57 @@
+﻿@model EmployeeModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Add employee</title>
+</head>
+<body>
+    <div>
+        <h3>Form of the employee</h3>
+        <form method="post" action="">
+            <table>
+                <tr>
+                    <td><label asp-for="Name"></label><br /></td>
+                    <td>
+                        <input type="text" asp-for="Name" />
+                        <span asp-validation-for="Name"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label asp-for="Surname"></label><br /></td>
+                    <td>
+                        <input type="text" asp-for="Surname" />
+                        <span asp-validation-for="Surname"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label asp-for="Patronymic"></label><br /></td>
+                    <td>
+                        <input type="text" asp-for="Patronymic" />
+                        <span asp-validation-for="Patronymic"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label asp-for="Title"></label><br /></td>
+                    <td>
+                        <input type="text" asp-for="Title" />
+                        <span asp-validation-for="Title"></span>
+                    </td>
+                </tr>
+                  <tr>
+                    <td><label asp-for="CompanyId"></label><br /></td>
+                    <td>
+                        <input type="text" asp-for="CompanyId" />
+                        <span asp-validation-for="CompanyId"></span>
+                    </td>
+                </tr>
+                <tr><td><input type="submit" value="Отправить" /> </td><td></td></tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>

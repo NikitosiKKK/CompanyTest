@@ -1,0 +1,37 @@
+﻿@model CompanyUpdateModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Покупка</title>
+</head>
+<body>
+    <div>
+        <h3>Форма изменений данных компании</h3>
+        <form method="post" action="">
+            <table>
+                <input type="hidden" name="Id" value="@ViewBag.Company.Id"></input>
+                <tr>
+                    <td><p>Insert <label asp-for="Name"></label></p></td>
+                    <td>
+                        <input type="text" asp-for="Name" value="@ViewBag.Company.Name" />
+                        <span asp-validation-for="Name"></span>
+                        </td>
+                </tr>
+                <tr>
+                    <td><p>Insert<label asp-for="Form"></label></p></td>
+                    <td>
+                        <input type="text" asp-for="Form" value="@ViewBag.Company.Form">
+                        <span asp-validation-for="Form"></span>
+                    </td>
+                </tr>
+                <tr><td><input type="submit" value="Отправить" /> </td><td></td></tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>

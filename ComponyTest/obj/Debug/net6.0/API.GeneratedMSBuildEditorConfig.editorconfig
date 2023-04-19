@@ -15,3 +15,67 @@ build_property.SupportLocalizedComponentNames =
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
 build_property.MSBuildProjectDirectory = D:\works\Новая папка\ComponyTest\ComponyTest
 build_property._RazorSourceGeneratorDebug = 
+
+[D:/works/Новая папка/ComponyTest/ComponyTest/VIews/VCompanies/AddCompany.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vklld3NcVkNvbXBhbmllc1xBZGRDb21wYW55LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/works/Новая папка/ComponyTest/ComponyTest/VIews/VCompanies/Companies.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vklld3NcVkNvbXBhbmllc1xDb21wYW5pZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/works/Новая папка/ComponyTest/ComponyTest/VIews/VCompanies/Company.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vklld3NcVkNvbXBhbmllc1xDb21wYW55LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/works/Новая папка/ComponyTest/ComponyTest/VIews/VCompanies/CompanyIsEmpty.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vklld3NcVkNvbXBhbmllc1xDb21wYW55SXNFbXB0eS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/works/Новая папка/ComponyTest/ComponyTest/VIews/VCompanies/DeleteCompany.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vklld3NcVkNvbXBhbmllc1xEZWxldGVDb21wYW55LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/works/Новая папка/ComponyTest/ComponyTest/VIews/VCompanies/DeletedCompany.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vklld3NcVkNvbXBhbmllc1xEZWxldGVkQ29tcGFueS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/works/Новая папка/ComponyTest/ComponyTest/VIews/VCompanies/UpdateCompany.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vklld3NcVkNvbXBhbmllc1xVcGRhdGVDb21wYW55LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/works/Новая папка/ComponyTest/ComponyTest/VIews/VCompanies/UpdatedCompany.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vklld3NcVkNvbXBhbmllc1xVcGRhdGVkQ29tcGFueS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/works/Новая папка/ComponyTest/ComponyTest/VIews/VEmployees/AddEmployee.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vklld3NcVkVtcGxveWVlc1xBZGRFbXBsb3llZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/works/Новая папка/ComponyTest/ComponyTest/VIews/VEmployees/DeletedEmployee.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vklld3NcVkVtcGxveWVlc1xEZWxldGVkRW1wbG95ZWUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/works/Новая папка/ComponyTest/ComponyTest/VIews/VEmployees/DeleteEmployee.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vklld3NcVkVtcGxveWVlc1xEZWxldGVFbXBsb3llZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/works/Новая папка/ComponyTest/ComponyTest/VIews/VEmployees/Employee.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vklld3NcVkVtcGxveWVlc1xFbXBsb3llZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/works/Новая папка/ComponyTest/ComponyTest/VIews/VEmployees/Employees.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vklld3NcVkVtcGxveWVlc1xFbXBsb3llZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/works/Новая папка/ComponyTest/ComponyTest/VIews/VEmployees/UpdatedEmployee.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vklld3NcVkVtcGxveWVlc1xVcGRhdGVkRW1wbG95ZWUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/works/Новая папка/ComponyTest/ComponyTest/VIews/VEmployees/UpdateEmployee.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vklld3NcVkVtcGxveWVlc1xVcGRhdGVFbXBsb3llZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/works/Новая папка/ComponyTest/ComponyTest/VIews/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vklld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 

@@ -1,0 +1,33 @@
+﻿@model EmployeeModel
+<DOCTYPE html>
+    <html>
+    <head>
+        <meta name="viewport" content="width=device-width" />
+        <title>Employee</title>
+    </head>
+    <body>
+        <div>
+            <h3>Information about employee</h3>
+            <table>
+
+                <tr>
+                   <td><label asp-for="Name"></label></td>
+                    <td><label asp-for="Surname"></label></td>
+                    <td><label asp-for="Patronymic"></label></td>
+                    <td><label asp-for="Title"></label></td>
+                    <td><label asp-for="Date"></label></td>
+
+                </tr>
+                    <tr>
+                        <td><p>@ViewBag.Employee.Name</p></td>
+                        <td><p>@ViewBag.Employee.Surname</p></td>
+                        <td><p>@ViewBag.Employee.Patronymic</p></td>
+                        <td><p>@ViewBag.Employee.Title</p></td>
+                        <td><p>@ViewBag.Employee.Date</p></td>
+                    </tr>
+            </table>
+
+        </div>
+        <a href="/VEmployees/Employees">Back</a>
+    </body>
+</html>

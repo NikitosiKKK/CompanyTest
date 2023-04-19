@@ -1,0 +1,40 @@
+﻿@model EmployeeModel
+<DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width" />
+        <title>Employees</title>
+    </head>
+    <body>
+        <div>
+        <h3>Information</h3>
+        <table>
+
+     <tr><td><label asp-for="Name"></label></td>
+                    <td><label asp-for="Surname"></label></td>
+                    <td><label asp-for="Patronymic"></label></td>
+                    <td><label asp-for="Title"></label></td>
+                    <td><label asp-for="Date"></label></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+            </tr>
+                @foreach (var b in ViewBag.Employees)
+                {
+                <tr>
+                    <td><p>@b.Name</p></td>
+                    <td><p>@b.Surname</p></td>
+                    <td><p>@b.Patronymic</p></td>
+                    <td><p>@b.Title</p></td>
+                    <td><p>@b.Date</p></td>
+                    <td><a href="/VEmployees/Employee/@b.Id">Show</a></td>
+                    <td><a href="/VEmployees/UpdateEmployee/@b.Id">Update</a></td>
+                    <td><a href="/VEmployees/DeleteEmployee/@b.Id">Delete</a></td>
+                </tr>
+                }
+        </table>
+            <a href="/VEmployees/AddEmployee">Add an employee</a>
+    </div>
+
+    </body>
+</html>

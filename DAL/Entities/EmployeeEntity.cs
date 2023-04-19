@@ -14,5 +14,6 @@ namespace DAL.Entities
         public string Surname { get; set; }
         public string Patronymic { get; set; }
         public string Title { get; set; }
+        public int? CompanyId { get; set; }
     }
 }

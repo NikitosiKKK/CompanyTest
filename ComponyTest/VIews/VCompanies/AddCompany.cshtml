@@ -1,0 +1,37 @@
+﻿@model CompanyModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Добавить Компанию</title>
+</head>
+<body>
+    <div>
+        <h3>Заполните форму для добавления Компании</h3>
+        <form method="post" action="">
+            <table>
+                <tr>
+                    <td><label asp-for="Name"></label><br /></td>
+                    <td>
+                        <input type="text" asp-for="Name"/>
+                        <span asp-validation-for="Name"></span>
+                    </td>
+
+                </tr>
+                <tr>
+                    <td><label asp-for="Form"></label><br /></td>
+                    <td>
+                        <input type="text" asp-for="Form" />
+                        <span asp-validation-for="Form"></span>
+                    </td>
+                </tr>
+                <tr><td><input type="submit" value="Отправить" /> </td><td></td></tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>

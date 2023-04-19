@@ -23,7 +23,7 @@ namespace DAL.Repositories
         public EmployeeEntity Create(EmployeeEntity employeeEntity)
         {
             using IDbConnection db = new SqlConnection(_connectionString);
-            var sqlQuery = $"INSERT INTO Employee (Name, Surname, Patronymic, Title) VALUES (@Name, @Surname, @Patronymic, @Title)";
+            var sqlQuery = $"INSERT INTO Employee (Name, Surname, Patronymic, Title, CompanyId) VALUES (@Name, @Surname, @Patronymic, @Title, @CompanyId)";
             db.Execute(sqlQuery, employeeEntity);
             return employeeEntity;
         }

@@ -1,0 +1,41 @@
+﻿@{
+    Layout = null;
+}
+<DOCTYPE html>
+    <html>
+    <head>
+        <meta name="viewport" content="width=device-width" />
+        <title>Компании</title>
+    </head>
+    <body>
+        <div>
+            <h3>Даннные о компании</h3>
+            <table>
+
+                <tr>
+                    <td><p>Имя компании</p></td>
+                    <td><p>Форма</p></td>
+                    <td><p>Имя сотрудника</p></td>
+                    <td><p>Фамилия</p></td>
+                    <td><p>Отчество</p></td>
+                    <td><p>Должность</p></td>
+
+                </tr>
+                    @foreach (var b in Model.Employees)
+                    {
+                       
+                        <tr>
+                            <td><p>@Model.Name</p></td>
+                        <td><p>@Model.Form</p></td>
+                        <td><p>@b.Name</p></td>
+                        <td><p>@b.Surname</p></td>
+                        <td><p>@b.Patronymic</p></td>
+                        <td><p>@b.Title</p></td>
+                    </tr>
+                }
+            </table>
+            
+        </div>
+        <a href="/VCompanies/Companies">Вернуться на главную</a>
+    </body>
+</html>

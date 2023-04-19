@@ -17,7 +17,8 @@ namespace BLL.Maps
                 Id = company.Id,
                 Name = company.Name,
                 Form = company.Form,
-                Emloyees = company.Emloyees.Select(e => EmployeeMap.Map(e)).ToList()
+                
+                Employees = company.Employees.Select(e => EmployeeMap.Map(e)).ToList()
             };
 
             return companyModel;
@@ -30,7 +31,7 @@ namespace BLL.Maps
                 Id = company.Id,
                 Name = company.Name,
                 Form = company.Form,
-                Emloyees = company.Emloyees.Select(e => EmployeeMap.Map(e)).ToList()
+                Employees = company.Employees.Select(e => EmployeeMap.Map(e)).ToList()
             };
 
             return companyEntity;

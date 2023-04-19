@@ -1,0 +1,19 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Удаление</title>
+</head>
+<body>
+    <div>
+        <h3>Вы действительно хотите удалить фирму из БД?</h3>
+       <p> <form action="/VCompanies/Companies"><button>Отмена</button></form>
+            <form method="post" action="/VCompanies/DeleteCompany/@Model.Id"> <button> Удалить </button> </form>
+        </p>
+    </div>
+</body>
+</html>
