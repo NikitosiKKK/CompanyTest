@@ -5606,7 +5606,7 @@ button.close {
   border-style: solid;
 }
 
-.bs-tooltip-top, .bs-tooltip-auto[x-placement^="top"] {
+.bs-tooltip-top, .bs-tooltip-auto[x-placement="top"] {
   padding: 0.4rem 0;
 }
 

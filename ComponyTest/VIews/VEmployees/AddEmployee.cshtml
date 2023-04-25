@@ -8,6 +8,7 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Add employee</title>
+    <link href="/css/bootstrap.css" rel="stylesheet" type="text/css">
 </head>
 <body>
     <div>
@@ -17,39 +18,39 @@
                 <tr>
                     <td><label asp-for="Name"></label><br /></td>
                     <td>
-                        <input type="text" asp-for="Name" />
+                        <input class="form-control" type="text" asp-for="Name" />
                         <span asp-validation-for="Name"></span>
                     </td>
                 </tr>
                 <tr>
                     <td><label asp-for="Surname"></label><br /></td>
                     <td>
-                        <input type="text" asp-for="Surname" />
+                        <input class="form-control" type="text" asp-for="Surname" />
                         <span asp-validation-for="Surname"></span>
                     </td>
                 </tr>
                 <tr>
                     <td><label asp-for="Patronymic"></label><br /></td>
                     <td>
-                        <input type="text" asp-for="Patronymic" />
+                        <input class="form-control" type="text" asp-for="Patronymic" />
                         <span asp-validation-for="Patronymic"></span>
                     </td>
                 </tr>
                 <tr>
                     <td><label asp-for="Title"></label><br /></td>
                     <td>
-                        <input type="text" asp-for="Title" />
+                        <input class="form-control" type="text" asp-for="Title" />
                         <span asp-validation-for="Title"></span>
                     </td>
                 </tr>
                   <tr>
                     <td><label asp-for="CompanyId"></label><br /></td>
                     <td>
-                        <input type="text" asp-for="CompanyId" />
+                        <input class="form-control" type="text" asp-for="CompanyId" />
                         <span asp-validation-for="CompanyId"></span>
                     </td>
                 </tr>
-                <tr><td><input type="submit" value="Send" /> </td><td></td></tr>
+                <tr><td><input class="form-control" type="submit" value="Send" /> </td><td></td></tr>
             </table>
         </form>
     </div>

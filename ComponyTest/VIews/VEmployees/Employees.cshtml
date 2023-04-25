@@ -1,15 +1,16 @@
 ﻿@model EmployeeModel
 <DOCTYPE html>
 <html>
-    <head>
-        <meta name="viewport" content="width=device-width" />
-        <title>Employees</title>
-    </head>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Employees</title>
+    <link href="/css/bootstrap.css" rel="stylesheet" type="text/css">
+</head>
     <body>
         <div>
         <h3>Information</h3>
-        <table>
 
+        <table class="table table-striped table-sm">
      <tr><td><label asp-for="Name"></label></td>
                     <td><label asp-for="Surname"></label></td>
                     <td><label asp-for="Patronymic"></label></td>

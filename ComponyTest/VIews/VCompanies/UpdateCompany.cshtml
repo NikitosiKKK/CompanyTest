@@ -8,28 +8,29 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Updation</title>
+    <link href="/css/bootstrap.css" rel="stylesheet" type="text/css">
 </head>
 <body>
     <div>
         <h3>Form of updation date</h3>
         <form method="post" action="">
             <table>
-                <input type="hidden" name="Id" value="@ViewBag.Company.Id"></input>
+                <input class="form-control" type="hidden" name="Id" value="@ViewBag.Company.Id"></input>
                 <tr>
                     <td><p>Insert <label asp-for="Name"></label></p></td>
                     <td>
-                        <input type="text" asp-for="Name" value="@ViewBag.Company.Name" />
+                        <input class="form-control" type="text" asp-for="Name" value="@ViewBag.Company.Name" />
                         <span asp-validation-for="Name"></span>
                         </td>
                 </tr>
                 <tr>
                     <td><p>Insert<label asp-for="Form"></label></p></td>
                     <td>
-                        <input type="text" asp-for="Form" value="@ViewBag.Company.Form">
+                        <input class="form-control" type="text" asp-for="Form" value="@ViewBag.Company.Form">
                         <span asp-validation-for="Form"></span>
                     </td>
                 </tr>
-                <tr><td><input type="submit" value="Send" /> </td><td></td></tr>
+                <tr><td><input class="form-control" type="submit" value="Send" /> </td><td></td></tr>
             </table>
         </form>
     </div>

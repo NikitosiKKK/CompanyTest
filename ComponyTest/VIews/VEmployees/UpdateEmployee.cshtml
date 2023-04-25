@@ -8,50 +8,51 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Update Employee</title>
+    <link href="/css/bootstrap.css" rel="stylesheet" type="text/css">
 </head>
 <body>
     <div>
         <h3>Form of update</h3>
         <form method="post" action="">
             <table>
-                <input type="hidden" name="Id" value="@ViewBag.Employee.Id"></input>
-                <input type="hidden" name="Date" value="@ViewBag.Employee.Date"></input>
+                <input class="form-control" type="hidden" name="Id" value="@ViewBag.Employee.Id"></input>
+                <input class="form-control" type="hidden" name="Date" value="@ViewBag.Employee.Date"></input>
                 <tr>
                     <td><p>Insert <label asp-for="Name"></label></p></td>
                     <td>
-                        <input type="text" asp-for="Name" value="@ViewBag.Employee.Name" />
+                        <input class="form-control" type="text" asp-for="Name" value="@ViewBag.Employee.Name" />
                         <span asp-validation-for="Name"></span>
                     </td>
                 </tr>
                 <tr>
                     <td><p>Insert<label asp-for="Surname"></label></p></td>
                     <td>
-                        <input type="text" asp-for="Surname" value="@ViewBag.Employee.Surname">
+                        <input class="form-control" type="text" asp-for="Surname" value="@ViewBag.Employee.Surname">
                         <span asp-validation-for="Surname"></span>
                     </td>
                 </tr>
                 <tr>
                     <td><p>Insert<label asp-for="Patronymic"></label></p></td>
                     <td>
-                        <input type="text" asp-for="Patronymic" value="@ViewBag.Employee.Patronymic">
+                        <input class="form-control" type="text" asp-for="Patronymic" value="@ViewBag.Employee.Patronymic">
                         <span asp-validation-for="Patronymic"></span>
                     </td>
                 </tr>
                 <tr>
                     <td><p>Insert<label asp-for="Title"></label></p></td>
                     <td>
-                        <input type="text" asp-for="Title" value="@ViewBag.Employee.Title">
+                        <input class="form-control" type="text" asp-for="Title" value="@ViewBag.Employee.Title">
                         <span asp-validation-for="Title"></span>
                     </td>
                 </tr>
                 <tr>
                     <td><label asp-for="CompanyId"></label><br /></td>
                     <td>
-                        <input type="text" asp-for="CompanyId" value="@ViewBag.Employee.CompanyId" />
+                        <input class="form-control" type="text" asp-for="CompanyId" value="@ViewBag.Employee.CompanyId" />
                         <span asp-validation-for="CompanyId"></span>
                     </td>
                 </tr>
-                <tr><td><input type="submit" value="Send" /> </td><td></td></tr>
+                <tr><td><input class="form-control" type="submit" value="Send" /> </td><td></td></tr>
             </table>
         </form>
     </div>
