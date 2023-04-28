@@ -16,6 +16,18 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = D:\works\Новая папка\ComponyTest\ComponyTest
 build_property._RazorSourceGeneratorDebug = 
 
+[D:/works/Новая папка/ComponyTest/ComponyTest/VIews/Account/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vklld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/works/Новая папка/ComponyTest/ComponyTest/VIews/Account/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vklld3NcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/works/Новая папка/ComponyTest/ComponyTest/VIews/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vklld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/works/Новая папка/ComponyTest/ComponyTest/VIews/VCompanies/AddCompany.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vklld3NcVkNvbXBhbmllc1xBZGRDb21wYW55LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 

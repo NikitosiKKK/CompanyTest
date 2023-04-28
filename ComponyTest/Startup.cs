@@ -1,7 +1,8 @@
-using BLL.Interfaces;
+﻿using BLL.Interfaces;
 using BLL.Services;
 using DAL.Interfaces;
 using DAL.Repositories;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -31,9 +32,16 @@ namespace ComponyTest
             var connectionString = Configuration.GetConnectionString("DefaultDatabase");
             services.AddTransient<ICompanyRepository, CompanyRepository>(x => new CompanyRepository(connectionString));
             services.AddTransient<IEmployeeRepository, EmployeeRepository>(x => new EmployeeRepository(connectionString));
+            services.AddTransient<IUserRepository, UserRepository>(x => new UserRepository(connectionString));
             services.AddTransient<ICompanyService, CompanyService>();
             services.AddTransient<IEmployeeService, EmployeeService>();
+            services.AddTransient<IUserService, UserService>();
             services.AddMvc(option => option.EnableEndpointRouting = false);
+            services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+        .AddCookie(options => //CookieAuthenticationOptions
+        {
+            options.LoginPath = new Microsoft.AspNetCore.Http.PathString("/Account/Login");
+        });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -46,7 +54,9 @@ namespace ComponyTest
             app.UseDeveloperExceptionPage();
             app.UseStatusCodePages();
             app.UseStaticFiles();
-            app.UseMvcWithDefaultRoute(); 
+            app.UseMvcWithDefaultRoute();
+            app.UseAuthentication();    // аутентификация
+            app.UseAuthorization();     // авторизация
         }
     }
 }
