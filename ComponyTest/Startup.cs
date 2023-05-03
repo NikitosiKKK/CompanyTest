@@ -33,15 +33,18 @@ namespace ComponyTest
             services.AddTransient<ICompanyRepository, CompanyRepository>(x => new CompanyRepository(connectionString));
             services.AddTransient<IEmployeeRepository, EmployeeRepository>(x => new EmployeeRepository(connectionString));
             services.AddTransient<IUserRepository, UserRepository>(x => new UserRepository(connectionString));
+            services.AddTransient<IDBCreation, DBCreation>(x => new DBCreation(connectionString));
             services.AddTransient<ICompanyService, CompanyService>();
             services.AddTransient<IEmployeeService, EmployeeService>();
             services.AddTransient<IUserService, UserService>();
+            services.AddTransient<IDBCreationService, DBCreationService>();
             services.AddMvc(option => option.EnableEndpointRouting = false);
             services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
         .AddCookie(options => //CookieAuthenticationOptions
         {
             options.LoginPath = new Microsoft.AspNetCore.Http.PathString("/Account/Login");
         });
+            services.AddAuthorization();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
