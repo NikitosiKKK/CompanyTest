@@ -18,6 +18,7 @@ namespace API.Controllers {
         {
             _dbCreationService.CompanyCreation();
             _dbCreationService.EmployeeCreation();
+            _dbCreationService.UsersCreation();
         }
     }
 }

@@ -15,7 +15,8 @@ namespace BLL.Maps
             {
                 Id = userEntity.Id,
                 Email = userEntity.Email,
-                Password = userEntity.Password
+                Password = userEntity.Password,
+                Role = userEntity.Role
             };
         return userModel;
         }
@@ -24,7 +25,8 @@ namespace BLL.Maps
             {
                 Id = userModel.Id,
                 Email = userModel.Email,
-                Password = userModel.Password
+                Password = userModel.Password,
+                Role = userModel.Role
             };
             return userEntity;
         }

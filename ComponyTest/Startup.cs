@@ -43,6 +43,7 @@ namespace ComponyTest
         .AddCookie(options => //CookieAuthenticationOptions
         {
             options.LoginPath = new Microsoft.AspNetCore.Http.PathString("/Account/Login");
+            options.AccessDeniedPath = new Microsoft.AspNetCore.Http.PathString("/Account/Login"); 
         });
             services.AddAuthorization();
         }
@@ -57,9 +58,11 @@ namespace ComponyTest
             app.UseDeveloperExceptionPage();
             app.UseStatusCodePages();
             app.UseStaticFiles();
-            app.UseMvcWithDefaultRoute();
             app.UseAuthentication();    // аутентификация
             app.UseAuthorization();     // авторизация
+            app.UseMvcWithDefaultRoute();
+            
+
         }
     }
 }

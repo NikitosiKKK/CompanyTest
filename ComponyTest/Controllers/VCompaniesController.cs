@@ -1,10 +1,12 @@
 ﻿using BLL.Interfaces;
 using BLL.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Linq;
 
 namespace API.Controllers
 {
+    [Authorize]
     public class VCompaniesController : Controller
     {
         private readonly ICompanyService _companyService;

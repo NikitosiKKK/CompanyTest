@@ -10,5 +10,6 @@ namespace DAL.Interfaces
     {
         public void CompanyCreation();
         public void EmployeeCreation();
+        public void UsersCreation();
     }
 }

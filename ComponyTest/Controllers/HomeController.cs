@@ -11,9 +11,9 @@ namespace API.Controllers
         {
             if (User.Identity.IsAuthenticated)
             {
-                return Content(User.Identity.Name);
+                return View();
             }
-            return Content("не аутентифицирован");
+            return RedirectToAction("Login", "Account");
         }
 
     }

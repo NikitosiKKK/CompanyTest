@@ -1,20 +1,10 @@
 ﻿@{
-    Layout = null;
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<!DOCTYPE html>
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Delete</title>
-    <link href="/css/bootstrap.css" rel="stylesheet" type="text/css">
-</head>
-<body>
     <div>
         <h3>Do you realy want delete this employee?</h3>
        <p> <form action="/VEmployees/Employees"><button>Back</button></form>
             <form method="post" action="/VEmployees/DeleteEmployee/@Model.Id"> <button> Delete </button> </form>
         </p>
     </div>
-</body>
-</html>

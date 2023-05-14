@@ -1,12 +1,8 @@
 ﻿@model EmployeeModel
-<DOCTYPE html>
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Employees</title>
-    <link href="/css/bootstrap.css" rel="stylesheet" type="text/css">
-</head>
-    <body>
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
         <div>
         <h3>Information</h3>
 
@@ -36,6 +32,3 @@
         </table>
             <a href="/VEmployees/AddEmployee">Add an employee.</a>
     </div>
-
-    </body>
-</html>

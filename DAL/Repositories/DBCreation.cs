@@ -36,5 +36,11 @@ namespace DAL.Repositories
             sqlQuery = "INSERT INTO Employee (Name, Surname, Patronymic, Title, CompanyId) VALUES ('Karina','Kaptur','Nikolaevna','Sushi-master',2),('Mikita','Poleshchuk','Sergeevich','Driver',3),('Klim','Poleshchuk','Sergeevich','Electrician',1)";
             db.Execute(sqlQuery);
         }
+
+        public void UsersCreation() {
+            using IDbConnection db = new SqlConnection(_connectionString);
+            var sqlQuery = "CREATE TABLE Users(Id int IDENTITY(1,1), Email varchar(30), Password varchar(100), Role varchar(30), Date datetime DEFAULT(getdate()))";
+            db.Execute(sqlQuery);
+        }
     }
 }

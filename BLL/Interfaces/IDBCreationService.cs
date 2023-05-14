@@ -10,5 +10,6 @@ namespace BLL.Interfaces
     {
         public void CompanyCreation();
         public void EmployeeCreation();
+        public void UsersCreation();
     }
 }

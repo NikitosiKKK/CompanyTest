@@ -23,5 +23,8 @@ namespace BLL.Services
         {
             _dBCreation.EmployeeCreation();
         }
+        public void UsersCreation() { 
+            _dBCreation.UsersCreation();
+        }
     }
 }

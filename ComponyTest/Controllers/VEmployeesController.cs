@@ -1,9 +1,11 @@
 ﻿using BLL.Interfaces;
 using BLL.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace API.Controllers
 {
+    [Authorize]
     public class VEmployeesController : Controller
     {
         private readonly IEmployeeService _employeeService;

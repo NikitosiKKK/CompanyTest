@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using DAL.Interfaces;
 using BLL.Models;
 using BLL.Interfaces;
+using BLL.Helpers;
 
 namespace API.Controllers
 {
@@ -17,7 +18,7 @@ namespace API.Controllers
 
         public AccountController(IUserService userService) {
 
-        _userService= userService;
+            _userService = userService;
 
         }
 
@@ -27,20 +28,16 @@ namespace API.Controllers
             return View();
         }
         [HttpPost]
-        [ValidateAntiForgeryToken]
         public async Task<IActionResult> Login(LoginModel model)
         {
             if (ModelState.IsValid)
             {
-                var Users = _userService.GetUsers();
-                UserModel user =  Users.Find(e=> e.Email==model.Email && e.Password==model.Password);
-                if (user != null)
-                {
-                    await Authenticate(model.Email); // аутентификация
-
+                var response = await _userService.Login(_User(model));
+                if (response.StatusCode == BLL.Helpers.StatusCode.OK) {
+                    await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(response.Data));
                     return RedirectToAction("Index", "Home");
                 }
-                ModelState.AddModelError("", "Некорректные логин и(или) пароль");
+                ModelState.AddModelError("", response.Description);
             }
             return View(model);
         }
@@ -50,41 +47,23 @@ namespace API.Controllers
             return View();
         }
         [HttpPost]
-        [ValidateAntiForgeryToken]
+
         public async Task<IActionResult> Register(RegisterModel model)
         {
-            if (ModelState.IsValid)
-            {
-                var Users = _userService.GetUsers();
-                UserModel user = Users.Find(e => e.Email == model.Email);
-                if (user == null)
-                {
-                    // добавляем пользователя в бд
-                    _userService.SetUser(_User(model));
-
-                    await Authenticate(model.Email); // аутентификация
-
-                    return RedirectToAction("Index", "Home");
-                }
-                else
-                    ModelState.AddModelError("", "Некорректные логин и(или) пароль");
+           
+            if (ModelState.IsValid) { 
+            var response = await _userService.Register(_User(model));
+            if (response.StatusCode == BLL.Helpers.StatusCode.OK) {
+                await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(response.Data));
+                return RedirectToAction("Index", "Home");
             }
+            ModelState.AddModelError("", response.Description);
+        } 
             return View(model);
         }
 
-        private async Task Authenticate(string userName)
-        {
-            // создаем один claim
-            var claims = new List<Claim>
-            {
-                new Claim(ClaimsIdentity.DefaultNameClaimType, userName)
-            };
-            // создаем объект ClaimsIdentity
-            ClaimsIdentity id = new ClaimsIdentity(claims, "ApplicationCookie", ClaimsIdentity.DefaultNameClaimType, ClaimsIdentity.DefaultRoleClaimType);
-            // установка аутентификационных куки
-            await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(id));
-        }
 
+       // [ValidateAntiForgeryToken]
         public async Task<IActionResult> Logout()
         {
             await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
@@ -95,6 +74,14 @@ namespace API.Controllers
             {
                 Email = registerModel.Email,
                 Password = registerModel.Password,
+            };
+            return User;
+        }
+        public UserModel _User(LoginModel loginModel) {
+            var User = new UserModel
+            {
+                Email = loginModel.Email,
+                Password = loginModel.Password,
             };
             return User;
         }

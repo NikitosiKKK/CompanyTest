@@ -8,6 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Dapper;
+using System.Net.Http;
+using System.Security.Claims;
 
 namespace DAL.Repositories
 {
@@ -30,7 +32,7 @@ namespace DAL.Repositories
         public void SetUser(UserEntity userEntity)
         {
             using IDbConnection db = new SqlConnection(_connectionString);
-            var sqlQuery = $"INSERT INTO Users (Email, Password) VALUES (@Email, @Password)";
+            var sqlQuery = $"INSERT INTO Users (Email, Password, Role) VALUES (@Email, @Password, @Role)";
             db.Execute(sqlQuery, userEntity);
         }
     }
